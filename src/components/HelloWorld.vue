@@ -1,19 +1,22 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ state.computedAge }}</h1>
     <p>
-      {{ num }}
+      {{ state.age }}
     </p>
+    <div @click="state.setAge">add .</div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Observer } from 'mobx-vue';
+import UserModel from '../store/user';
 
+@Observer
 @Component
 export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
-  num: number = 10;
+  state:Object = new UserModel();
 }
 </script>
 
