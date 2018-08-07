@@ -47,7 +47,12 @@
       "@vue/airbnb",
       "@vue/typescript"
     ],
-    "rules": {},
+    "rules": {
+      "indent": ["error", 4, { "SwitchCase": 1 }],
+      "space-before-function-paren": 0,
+      "no-underscore-dangle": 0,
+      "no-restricted-globals": 0
+    },
     "parserOptions": {
       "parser": "typescript-eslint-parser"
     }

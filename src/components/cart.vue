@@ -1,23 +1,24 @@
 <template>
   <div class="hello">
-    <h1>{{ state.computedAge }}</h1>
-    <p>
-      {{ state.age }}
-    </p>
-    <div @click="state.setAge">add .</div>
+    <h1>{{ state.cart.price }}</h1>
+    <h2>{{ state.cart.name }}</h2>
+    <input v-model="state.cart.name" />
+    <div @click="state.add">add .</div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { Observer } from 'mobx-vue';
-import UserModel from '../store/user';
+import CartView from '../store/cart';
+
 
 @Observer
 @Component
 export default class HelloWorld extends Vue {
-  state:Object = new UserModel();
+  state = new CartView();
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
