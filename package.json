@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "open": "node open.js",
+    "serve": "node open.js && vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
@@ -33,6 +34,7 @@
     "babel-core": "7.0.0-bridge.0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
+    "shelljs": "^0.8.2",
     "ts-jest": "^23.0.0",
     "typescript": "^3.0.0",
     "vue-template-compiler": "^2.5.16"
@@ -48,7 +50,13 @@
       "@vue/typescript"
     ],
     "rules": {
-      "indent": ["error", 4, { "SwitchCase": 1 }],
+      "indent": [
+        "error",
+        4,
+        {
+          "SwitchCase": 1
+        }
+      ],
       "space-before-function-paren": 0,
       "no-underscore-dangle": 0,
       "no-restricted-globals": 0

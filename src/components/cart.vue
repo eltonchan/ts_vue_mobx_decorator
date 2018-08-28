@@ -12,7 +12,6 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 import { Observer } from 'mobx-vue';
 import CartView from '../store/cart';
 
-
 @Observer
 @Component
 export default class HelloWorld extends Vue {
