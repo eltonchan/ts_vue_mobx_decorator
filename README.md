@@ -31,4 +31,3 @@ npm run test:unit
 ```
 npm run test:e2e
 ```
-### 测试一下git 1
